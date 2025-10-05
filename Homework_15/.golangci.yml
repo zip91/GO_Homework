@@ -1,0 +1,38 @@
+run:
+  timeout: 3m
+  tests: true
+
+linters:
+  enable:
+    - govet
+    - errcheck
+    - staticcheck
+    - gosimple
+    - ineffassign
+    - goconst
+    - gofumpt
+    - revive
+    - misspell
+    - nolintlint
+
+linters-settings:
+  revive:
+    rules:
+      - name: blank-imports
+      - name: import-shadowing
+      - name: var-naming
+      - name: receiver-naming
+      - name: indent-error-flow
+      - name: early-return
+  gofumpt:
+    module-path: go_course/Homework_5
+
+issues:
+  exclude-use-default: false
+  max-issues-per-linter: 0
+  max-same-issues: 0
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - goconst
+        - revive
