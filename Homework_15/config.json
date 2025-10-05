@@ -1,0 +1,4 @@
+{
+  "addr": ":8080",
+  "pg_conn": "postgres://user:pass@localhost:5432/dbname?sslmode=disable"
+}
